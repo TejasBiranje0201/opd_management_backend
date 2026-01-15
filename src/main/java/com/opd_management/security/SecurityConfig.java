@@ -29,7 +29,8 @@ public class SecurityConfig {
 	            .requestMatchers( "/doctors/register",
 	            					"/auth/login/doctor",
 	            		 "/auth/login/admin",
-	                     "/auth/login/reception").permitAll()
+	                     "/auth/login/reception",
+	            		 "/hello/get").permitAll()
 	            .anyRequest().authenticated()
 	        )
 	        .sessionManagement(session -> 
